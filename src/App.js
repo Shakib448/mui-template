@@ -8,10 +8,13 @@ import {
   ThemeProvider,
   createMuiTheme,
   TextField,
+  Typography,
+  Container,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
 import { green } from "@material-ui/core/colors";
+import "fontsource-roboto";
 
 const useStyle = makeStyles({
   root: {
@@ -24,6 +27,11 @@ const useStyle = makeStyles({
 });
 
 const theme = createMuiTheme({
+  typography: {
+    h4: {
+      fontSize: 40,
+    },
+  },
   palette: {
     primary: {
       main: green[500],
@@ -37,7 +45,8 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div
+      <Container
+        maxWidth="xs"
         style={{
           height: "100vh",
           display: "flex",
@@ -47,6 +56,7 @@ const App = () => {
           flexDirection: "column",
         }}
       >
+        <Typography variant="h4">Welcome to MUI</Typography>
         <TextField
           variant="filled"
           color="secondary"
@@ -72,7 +82,7 @@ const App = () => {
           <Button>Hello World</Button>
         </ButtonGroup>
         <Button className={classes.root}>Test style button</Button>
-      </div>
+      </Container>
     </ThemeProvider>
   );
 };

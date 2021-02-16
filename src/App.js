@@ -1,18 +1,29 @@
 import React, { useState } from "react";
-
 import {
   Button,
   ButtonGroup,
   Checkbox,
   FormControlLabel,
+  makeStyles,
   TextField,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
 
+const useStyle = makeStyles({
+  root: {
+    border: 0,
+    borderRadius: 14,
+    color: "white",
+    background: "linear-gradient(45deg #000, #999) ",
+    marginTop: 100,
+  },
+});
+
 const App = () => {
   const [checked, setChecked] = useState(true);
-  console.log(checked);
+  const classes = useStyle();
+
   return (
     <div
       style={{
@@ -48,6 +59,7 @@ const App = () => {
         <Button>Hello World</Button>
         <Button>Hello World</Button>
       </ButtonGroup>
+      <Button className={classes.root}>Test style button</Button>
     </div>
   );
 };

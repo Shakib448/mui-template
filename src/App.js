@@ -5,6 +5,7 @@ import {
   ButtonGroup,
   Checkbox,
   FormControlLabel,
+  TextField,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
@@ -23,6 +24,13 @@ const App = () => {
         flexDirection: "column",
       }}
     >
+      <TextField
+        variant="filled"
+        color="secondary"
+        type="email"
+        label="Email"
+        placeholder="test@gmail.com"
+      />
       <FormControlLabel
         control={
           <Checkbox

@@ -10,6 +10,8 @@ import {
   TextField,
   Typography,
   Container,
+  Paper,
+  Grid,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import SaveIcon from "@material-ui/icons/Save";
@@ -56,6 +58,18 @@ const App = () => {
           flexDirection: "column",
         }}
       >
+        <Grid container spacing={5} justify="center">
+          <Grid item>
+            <Paper style={{ height: 75, width: 50 }} />
+          </Grid>
+          <Grid item>
+            <Paper style={{ height: 75, width: 50 }} />
+          </Grid>
+          <Grid item>
+            <Paper style={{ height: 75, width: 50 }} />
+          </Grid>
+        </Grid>
+
         <Typography variant="h4">Welcome to MUI</Typography>
         <TextField
           variant="filled"

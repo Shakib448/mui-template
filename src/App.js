@@ -58,7 +58,7 @@ const App = () => {
           flexDirection: "column",
         }}
       >
-        <Grid container spacing={5} justify="center">
+        <Grid container spacing={2} justify="center">
           <Grid item>
             <Paper style={{ height: 75, width: 50 }} />
           </Grid>

@@ -1,102 +1,16 @@
-import React, { useState } from "react";
-import {
-  Button,
-  ButtonGroup,
-  Checkbox,
-  FormControlLabel,
-  makeStyles,
-  ThemeProvider,
-  createMuiTheme,
-  TextField,
-  Typography,
-  Container,
-  Paper,
-  Grid,
-} from "@material-ui/core";
-import DeleteIcon from "@material-ui/icons/Delete";
-import SaveIcon from "@material-ui/icons/Save";
-import { green } from "@material-ui/core/colors";
-import "fontsource-roboto";
-
-const useStyle = makeStyles({
-  root: {
-    border: 0,
-    borderRadius: 14,
-    color: "white",
-    background: "linear-gradient(45deg #000, #999) ",
-    marginTop: 100,
-  },
-});
-
-const theme = createMuiTheme({
-  typography: {
-    h4: {
-      fontSize: 40,
-    },
-  },
-  palette: {
-    primary: {
-      main: green[500],
-    },
-  },
-});
+import { ThemeProvider, Button } from "@material-ui/core";
+import React from "react";
+import theme from "./Theme/Theme";
 
 const App = () => {
-  const [checked, setChecked] = useState(true);
-  const classes = useStyle();
-
   return (
     <ThemeProvider theme={theme}>
-      <Container
-        maxWidth="xs"
-        style={{
-          height: "100vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          background: "lightgray",
-          flexDirection: "column",
-        }}
-      >
-        <Grid container spacing={2} justify="center">
-          <Grid item>
-            <Paper style={{ height: 75, width: 50 }} />
-          </Grid>
-          <Grid item>
-            <Paper style={{ height: 75, width: 50 }} />
-          </Grid>
-          <Grid item>
-            <Paper style={{ height: 75, width: 50 }} />
-          </Grid>
-        </Grid>
-
-        <Typography variant="h4">Welcome to MUI</Typography>
-        <TextField
-          variant="filled"
-          color="secondary"
-          type="email"
-          label="Email"
-          placeholder="test@gmail.com"
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={checked}
-              color="primary"
-              onChange={(e) => setChecked(e.target.checked)}
-              inputProps={{ "aria-label": "secondary checkbox" }}
-              icon={<DeleteIcon />}
-              checkedIcon={<SaveIcon />}
-            />
-          }
-          label="Testing Checkbox"
-        />
-        <ButtonGroup variant="contained" color="primary">
-          <Button>Hello World</Button>
-          <Button>Hello World</Button>
-        </ButtonGroup>
-        <Button className={classes.root}>Test style button</Button>
-      </Container>
+      <Button variant="contained" color="primary">
+        Click Me
+      </Button>
+      <Button variant="contained" color="secondary">
+        Click Me
+      </Button>
     </ThemeProvider>
   );
 };

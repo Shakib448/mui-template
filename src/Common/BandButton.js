@@ -13,13 +13,20 @@ const useStyles = makeStyles({
       color: "yellow",
     },
   },
+  secondary: {
+    fontWeight: 700,
+  },
 });
 
 const BandButton = ({ color, children }) => {
   const classes = useStyles();
   return (
     <Button
-      classes={{ root: classes.default, containedPrimary: classes.primary }}
+      classes={{
+        root: classes.default,
+        containedPrimary: classes.primary,
+        containedSecondary: classes.secondary,
+      }}
       variant="contained"
       color={color}
       disableElevation

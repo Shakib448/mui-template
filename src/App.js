@@ -1,16 +1,12 @@
 import { ThemeProvider, Button } from "@material-ui/core";
 import React from "react";
+import BandButton from "./Common/BandButton";
 import theme from "./Theme/Theme";
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" color="primary">
-        Click Me
-      </Button>
-      <Button variant="contained" color="secondary">
-        Click Me
-      </Button>
+      <BandButton color="primary">Click Me</BandButton>
     </ThemeProvider>
   );
 };
